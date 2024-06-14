@@ -1,7 +1,7 @@
 const express = require('express');
 const { webhook,attendeeUpdated,
   orderUpdated,
- } = require('../controllers/webhook');
+ } = require('../api/webhook');
 
 
 const router = express.Router();

@@ -1,5 +1,19 @@
 {
   "version": 2,
+  "functions": {
+   "api/webhook.js": {
+      "runtime": "nodejs16.x",
+      "handler": "webhook.webhook"
+    },
+    "api/attendee-updated.js": {
+      "runtime": "nodejs16.x",
+      "handler": "webhook.attendeeUpdated"
+    },
+    "api/order-updated.js": {
+      "runtime": "nodejs16.x",
+      "handler": "webhook.orderUpdated"
+    }
+  },
   "builds": [
     {
       "src": "bin/www",
@@ -7,6 +21,18 @@
     }
   ],
   "routes": [
+    {
+      "src": "/api/webhook",
+      "dest": "/api/webhook.js"
+    },
+    {
+      "src": "/api/attendee-updated",
+      "dest": "/api/attendee-updated.js"
+    },
+    {
+      "src": "/api/order-updated",
+      "dest": "/api/order-updated.js"
+    },
     {
       "src": "/(.*)",
       "dest": "/bin/www"
