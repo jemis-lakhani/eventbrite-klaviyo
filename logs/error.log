@@ -1,0 +1,2 @@
+{"level":"error","message":"[RESPONSE] [ID: 96987d7d] [POST] /webhook/attendeeUpdated [STATUS: 500] [RESPONSE TIME: '1s']\n[RESPONSE MESSAGE: 'Internal server error.'}]","ms":"+1s","timestamp":"2024-06-14T09:41:13.651Z"}
+{"level":"error","message":"data is not defined","ms":"+2ms","stack":"ReferenceError: data is not defined\n    at attendeeUpdated (/home/ravi/Rv-Data/eventBrite/eventbrite-klaviyo/controllers/webhook.js:45:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-14T09:41:13.653Z"}

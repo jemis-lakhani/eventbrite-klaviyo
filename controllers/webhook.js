@@ -12,30 +12,42 @@ const { axiosInstance, axiosRequest } = require('../helpers/axios.helper');
 module.exports = {
   webhook: async (req, res) => {
     console.log(req.body, "body");
-    //* only getting a userID in this webhook 
-    webhookData = req.body;
-    let apiUrl = webhookData.api_url.replace('{api-endpoint-to-fetch-object-details}', 'v3/events/{event_id}/');
 
+    //* only getting a userID in this webhook 
+    let webhookData = req.body;
+    console.log(webhookData, "webhook");
     return res.send('Webhook Run Successfully');
   },
-  attendeeUpdated: async (req, res) => {
-    console.log(req.body, "body attendee.updated");
-    //* only getting a userID in this webhook 
-    webhookData = req.body;
-    let data = await axiosRequest('GET', '/orders/9818771139/');
 
-    console.log(data, "data");
-    return res.send('Webhook Run Successfully');
+  attendeeUpdated: async (req, res) => {
+    let webhookData = req.body;
+    console.log(webhookData, "body attendee.updated");
+
+    if (webhookData.api_url.includes('https://www.eventbriteapi.com/v3')) {
+      let api_url = webhookData.api_url?.split("https://www.eventbriteapi.com/v3");
+      let data = await axiosRequest('GET', api_url[1]);
+
+      console.log(data, "------------- Data From Attendes Updated-------------");
+    } else {
+      console.log("api_url not found");
+    }
+
+    return res.send({ message: 'Webhook Run Successfully', data });
   },
 
   orderUpdated: async (req, res) => {
-    console.log(req.body, "body attendee.updated");
-    //* only getting a userID in this webhook 
-    webhookData = req.body;
-    // need to add the order_Id or add path here
-    let data = await axiosRequest('GET', '/orders/9818771139/');
+    let webhookData = req.body;
+    console.log(webhookData, "body attendee.updated");
 
-    console.log(data, "data");
+    if (webhookData.api_url.includes('https://www.eventbriteapi.com/v3')) {
+      let api_url = webhookData.api_url?.split("https://www.eventbriteapi.com/v3");
+      let data = await axiosRequest('GET', api_url[1]);
+
+      console.log(data, "data attendes updated");
+    } else {
+      console.log("api_url not found");
+    }
+
     return res.send('Webhook Run Successfully');
   },
 

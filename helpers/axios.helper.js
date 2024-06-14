@@ -6,7 +6,7 @@ let axios = require('axios');
   timeout: 1000,
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + 'S6PCOQSA7FNQAWQKP3DC',
+    'Authorization': 'Bearer ' + 'W37UY2HZTVGZDY7E6YFP',
   },
 });
 
