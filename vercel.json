@@ -2,24 +2,9 @@
   "version": 2,
   "functions": {
    "api/webhook.js": {
-      "runtime": "nodejs16.x",
-      "handler": "webhook.webhook"
-    },
-    "api/attendee-updated.js": {
-      "runtime": "nodejs16.x",
-      "handler": "webhook.attendeeUpdated"
-    },
-    "api/order-updated.js": {
-      "runtime": "nodejs16.x",
-      "handler": "webhook.orderUpdated"
+      "runtime": "nodejs16.x"
     }
   },
-  "builds": [
-    {
-      "src": "bin/www",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/api/webhook",
