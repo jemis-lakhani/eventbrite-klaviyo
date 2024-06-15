@@ -22,10 +22,10 @@ module.exports = {
   attendeeUpdated: async (req, res) => {
     let webhookData = req.body;
     console.log(webhookData, "body attendee.updated");
-
+    let data = null;
     if (webhookData.api_url.includes('https://www.eventbriteapi.com/v3')) {
       let api_url = webhookData.api_url?.split("https://www.eventbriteapi.com/v3");
-      let data = await axiosRequest('GET', api_url[1]);
+      data = await axiosRequest('GET', api_url[1]);
 
       console.log(data, "------------- Data From Attendes Updated-------------");
     } else {
