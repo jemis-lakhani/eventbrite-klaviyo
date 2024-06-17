@@ -1,6 +1,7 @@
 let axios = require('axios');
 //*import the axios helper
 const { axiosInstance, axiosRequest } = require('../helpers/axios.helper');
+const response = require('../helpers/api.response.helper');
 //* write a function here
 // module.exports = (req, res) => {
 //   console.log(`DEBUG: :-------------: req.body :-------------:`, req.body)
@@ -11,32 +12,28 @@ const { axiosInstance, axiosRequest } = require('../helpers/axios.helper');
 //* write a a code for api
 module.exports = {
   webhook: async (req, res) => {
-    console.log(req.body, "body");
-    //* only getting a userID in this webhook 
-    webhookData = req.body;
-    let apiUrl = webhookData.api_url.replace('{api-endpoint-to-fetch-object-details}', 'v3/events/{event_id}/');
+    try {
+      let webhookData = req.body;
+      console.log(webhookData, "webhook");
 
-    return res.send('Webhook Run Successfully');
+      if (webhookData?.api_url && webhookData.api_url.includes('https://www.eventbriteapi.com/v3')) {
+        let api_url = webhookData.api_url?.split("https://www.eventbriteapi.com/v3");
+        let data = await axiosRequest('GET', webhookData?.api_url);
+
+        console.log(data, "------------- Data From Webhhok Updated-------------");
+        return response.OK({ res, message: 'Webhook Run Successfully', payload: data });
+
+      } else {
+        console.log("api_url not found");
+        return response.NO_CONTENT_FOUND({ res, message: 'api_url not found', payload: null });
+      }
+
+    } catch (error) {
+      console.log(error, "error");
+    }
+
   },
-  attendeeUpdated: async (req, res) => {
-    console.log(req.body, "body attendee.updated");
-    //* only getting a userID in this webhook 
-    webhookData = req.body;
-    let data = await axiosRequest('GET', '/orders/9818771139/');
 
-    console.log(data, "data");
-    return res.send('Webhook Run Successfully');
-  },
 
-  orderUpdated: async (req, res) => {
-    console.log(req.body, "body attendee.updated");
-    //* only getting a userID in this webhook 
-    webhookData = req.body;
-    // need to add the order_Id or add path here
-    let data = await axiosRequest('GET', '/orders/9818771139/');
-
-    console.log(data, "data");
-    return res.send('Webhook Run Successfully');
-  },
 
 };
