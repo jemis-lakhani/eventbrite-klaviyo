@@ -2,11 +2,11 @@
 let axios = require('axios');
 
  const axiosInstance = axios.create({
-  baseURL: 'https://www.eventbriteapi.com/v3',
+  baseURL: '',
   timeout: 1000,
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + 'W37UY2HZTVGZDY7E6YFP',
+    'Authorization': 'Bearer ' + process.env.EVENTBBRITE_API_TOKEN,
   },
 });
 

@@ -8,6 +8,8 @@ const envSchema = Joi.object({
     API_BASE_URL: Joi.string().trim().default('/api'),
     VIEWS_BASE_URL: Joi.string().trim().default(''),
     PORT: Joi.number().default(3000),
+    KLAVIYO_API_KEY: Joi.string().trim().required(),
+    EVENTBBRITE_API_TOKEN: Joi.string().trim().required(),
 });
 
 const { value: vars, error } = envSchema.validate(process.env, {
