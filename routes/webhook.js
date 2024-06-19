@@ -2,7 +2,7 @@ const express = require('express');
 const { webhook,attendeeUpdated,
   orderUpdated,
  } = require('../controllers/webhook');
-const hello = require('../controllers/hello');
+const { hello } = require('../controllers/hello');
 
 
 const router = express.Router();
