@@ -1,4 +1,4 @@
-const { response, logger } = require('../helpers');
+const { response } = require('../helpers');
 const { MESSAGE } = require('../helpers/constant.helper');
 
 module.exports = async (error, _req, res, _next) => {

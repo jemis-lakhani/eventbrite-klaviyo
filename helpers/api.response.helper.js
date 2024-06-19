@@ -1,7 +1,7 @@
 const {
     ENUM: { HTTP_CODES },
 } = require('../helpers/constant.helper');
-const logger = require('./logger.helper');
+// const logger = require('./logger.helper');
 const { formatTime } = require('./common.helper');
 
 function responseLogger({ res, message, statusCode }) {
@@ -12,7 +12,8 @@ function responseLogger({ res, message, statusCode }) {
     }] [${method}] ${originalUrl} [STATUS: ${statusCode}] [RESPONSE TIME: '${responseTime}']${
         message ? `\n[RESPONSE MESSAGE: '${message}'}` : ''
     }]`;
-    logger[statusCode >= 400 && statusCode < 500 ? 'warn' : statusCode >= 500 ? 'error' : 'info'](log);
+    // logger[statusCode >= 400 && statusCode < 500 ? 'warn' : statusCode >= 500 ? 'error' : 'info'](log);
+    console.log(log);
 }
 
 const response = {
