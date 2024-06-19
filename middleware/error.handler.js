@@ -7,5 +7,6 @@ module.exports = async (error, _req, res, _next) => {
         message: MESSAGE.INTERNAL_SERVER_ERROR,
         payload: { context: error.message },
     });
-    return logger.error(error);
+    // return logger.error(error);
+    return "error -- " + error;
 };
