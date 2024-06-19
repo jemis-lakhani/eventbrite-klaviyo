@@ -3,10 +3,11 @@ let axios = require('axios');
 
  const axiosInstance = axios.create({
   baseURL: '',
-  timeout: 1000,
+  timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + process.env.EVENTBBRITE_API_TOKEN,
+    'Authorization': 'Bearer W37UY2HZTVGZDY7E6YFP',
+    // 'Authorization': 'Bearer ' + process.env.EVENTBBRITE_API_TOKEN,
   },
 });
 
