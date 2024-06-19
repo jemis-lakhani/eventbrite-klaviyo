@@ -1,10 +1,11 @@
 const express = require('express');
 const { webhook,attendeeUpdated,
   orderUpdated,
- } = require('../api/webhook');
+ } = require('../controllers/webhook');
 
 
 const router = express.Router();
+router.get('/', (req, res) => res.json({ message: 'hello' }));
 router.post('/', webhook);
 // router.post('/attendeeUpdated', attendeeUpdated);
 // router.post('/orderUpdated', orderUpdated);
