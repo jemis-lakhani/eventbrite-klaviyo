@@ -10,6 +10,7 @@ const envSchema = Joi.object({
     PORT: Joi.number().default(3000),
     KLAVIYO_API_KEY: Joi.string().trim().required(),
     EVENTBBRITE_API_TOKEN: Joi.string().trim().required(),
+    KLAVIYO_PRIVATE_API_KEY: Joi.string().trim().required(),
 });
 
 const { value: vars, error } = envSchema.validate(process.env, {

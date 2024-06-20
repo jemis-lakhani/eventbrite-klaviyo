@@ -53,3 +53,153 @@
 {"level":"info","message":"[REQUEST] [ID: 96987d7d] [POST] /webhook/attendeeUpdated","ms":"+32s","timestamp":"2024-06-14T09:41:12.586Z"}
 {"level":"error","message":"[RESPONSE] [ID: 96987d7d] [POST] /webhook/attendeeUpdated [STATUS: 500] [RESPONSE TIME: '1s']\n[RESPONSE MESSAGE: 'Internal server error.'}]","ms":"+1s","timestamp":"2024-06-14T09:41:13.651Z"}
 {"level":"error","message":"data is not defined","ms":"+2ms","stack":"ReferenceError: data is not defined\n    at attendeeUpdated (/home/ravi/Rv-Data/eventBrite/eventbrite-klaviyo/controllers/webhook.js:45:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-14T09:41:13.653Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-18T15:14:32.703Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+162ms","timestamp":"2024-06-18T15:14:32.865Z"}
+{"level":"info","message":"[REQUEST] [ID: dcc9a052] [POST] /webhook/","ms":"+17s","timestamp":"2024-06-18T15:14:49.851Z"}
+{"level":"info","message":"[RESPONSE] [ID: dcc9a052] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '4ms']\n[RESPONSE MESSAGE: 'api_url not found'}]","ms":"+4ms","timestamp":"2024-06-18T15:14:49.855Z"}
+{"level":"info","message":"[REQUEST] [ID: d456c66d] [POST] /webhook/","ms":"+3m","timestamp":"2024-06-18T15:17:32.479Z"}
+{"level":"info","message":"[RESPONSE] [ID: d456c66d] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '1ms']\n[RESPONSE MESSAGE: 'api_url not found'}]","ms":"+1ms","timestamp":"2024-06-18T15:17:32.480Z"}
+{"level":"info","message":"[REQUEST] [ID: a935c6e0] [POST] /webhook/","ms":"+21s","timestamp":"2024-06-18T15:17:53.215Z"}
+{"level":"info","message":"[RESPONSE] [ID: a935c6e0] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '2ms']\n[RESPONSE MESSAGE: 'api_url not found'}]","ms":"+2ms","timestamp":"2024-06-18T15:17:53.217Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-18T15:18:14.104Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+152ms","timestamp":"2024-06-18T15:18:14.257Z"}
+{"level":"info","message":"[REQUEST] [ID: 88599dc9] [POST] /webhook/","ms":"+3s","timestamp":"2024-06-18T15:18:17.073Z"}
+{"level":"info","message":"[RESPONSE] [ID: 88599dc9] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '4ms']]","ms":"+4ms","timestamp":"2024-06-18T15:18:17.077Z"}
+{"level":"info","message":"[REQUEST] [ID: fdd8e69f] [POST] /webhook/","ms":"+2m","timestamp":"2024-06-18T15:20:45.115Z"}
+{"level":"info","message":"[RESPONSE] [ID: fdd8e69f] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '14ms']]","ms":"+14ms","timestamp":"2024-06-18T15:20:45.129Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T10:03:12.812Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+258ms","timestamp":"2024-06-20T10:03:13.071Z"}
+{"level":"info","message":"[REQUEST] [ID: 5dd53ad3] [POST] /webhook","ms":"+3m","timestamp":"2024-06-20T10:05:59.177Z"}
+{"level":"info","message":"[RESPONSE] [ID: 5dd53ad3] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '36ms']]","ms":"+35ms","timestamp":"2024-06-20T10:05:59.213Z"}
+{"level":"info","message":"[REQUEST] [ID: c3056976] [POST] /webhook","ms":"+8s","timestamp":"2024-06-20T10:06:07.507Z"}
+{"level":"info","message":"[RESPONSE] [ID: c3056976] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '2ms']]","ms":"+2ms","timestamp":"2024-06-20T10:06:07.509Z"}
+{"level":"info","message":"[REQUEST] [ID: f2c83887] [POST] /webhook","ms":"+58s","timestamp":"2024-06-20T10:07:05.725Z"}
+{"level":"info","message":"[REQUEST] [ID: 89345da3] [POST] /webhook","ms":"+658ms","timestamp":"2024-06-20T10:07:06.383Z"}
+{"level":"info","message":"[RESPONSE] [ID: f2c83887] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '1s']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+406ms","timestamp":"2024-06-20T10:07:06.789Z"}
+{"level":"info","message":"[REQUEST] [ID: 935ec8bf] [POST] /webhook","ms":"+16ms","timestamp":"2024-06-20T10:07:06.805Z"}
+{"level":"info","message":"[REQUEST] [ID: fd52d5e1] [POST] /webhook","ms":"+28ms","timestamp":"2024-06-20T10:07:06.833Z"}
+{"level":"info","message":"[RESPONSE] [ID: 89345da3] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '466ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+16ms","timestamp":"2024-06-20T10:07:06.849Z"}
+{"level":"info","message":"[RESPONSE] [ID: fd52d5e1] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '531ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+515ms","timestamp":"2024-06-20T10:07:07.364Z"}
+{"level":"info","message":"[REQUEST] [ID: 32c2adcf] [POST] /webhook","ms":"+1ms","timestamp":"2024-06-20T10:07:07.365Z"}
+{"level":"info","message":"[REQUEST] [ID: 89b2aa26] [POST] /webhook","ms":"+68ms","timestamp":"2024-06-20T10:07:07.433Z"}
+{"level":"info","message":"[RESPONSE] [ID: 935ec8bf] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '784ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+156ms","timestamp":"2024-06-20T10:07:07.589Z"}
+{"level":"info","message":"[REQUEST] [ID: a6f75e90] [POST] /webhook","ms":"+309ms","timestamp":"2024-06-20T10:07:07.898Z"}
+{"level":"info","message":"[REQUEST] [ID: 05c5111d] [POST] /webhook","ms":"+283ms","timestamp":"2024-06-20T10:07:08.181Z"}
+{"level":"info","message":"[RESPONSE] [ID: 89b2aa26] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '801ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+53ms","timestamp":"2024-06-20T10:07:08.234Z"}
+{"level":"info","message":"[RESPONSE] [ID: 32c2adcf] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '894ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+25ms","timestamp":"2024-06-20T10:07:08.259Z"}
+{"level":"info","message":"[RESPONSE] [ID: a6f75e90] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '430ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+68ms","timestamp":"2024-06-20T10:07:08.327Z"}
+{"level":"info","message":"[RESPONSE] [ID: 05c5111d] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '1s']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+861ms","timestamp":"2024-06-20T10:07:09.188Z"}
+{"level":"info","message":"[REQUEST] [ID: e3d7e0db] [POST] /webhook","ms":"+6m","timestamp":"2024-06-20T10:12:41.561Z"}
+{"level":"info","message":"[REQUEST] [ID: 9d382de8] [POST] /webhook","ms":"+43ms","timestamp":"2024-06-20T10:12:41.604Z"}
+{"level":"info","message":"[RESPONSE] [ID: e3d7e0db] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '870ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+827ms","timestamp":"2024-06-20T10:12:42.431Z"}
+{"level":"info","message":"[RESPONSE] [ID: 9d382de8] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '843ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+16ms","timestamp":"2024-06-20T10:12:42.447Z"}
+{"level":"info","message":"[REQUEST] [ID: 93dae1e7] [POST] /webhook","ms":"+1s","timestamp":"2024-06-20T10:12:43.530Z"}
+{"level":"info","message":"[RESPONSE] [ID: 93dae1e7] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '514ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+514ms","timestamp":"2024-06-20T10:12:44.044Z"}
+{"level":"info","message":"[REQUEST] [ID: 962f29d8] [POST] /webhook","ms":"+557ms","timestamp":"2024-06-20T10:12:44.601Z"}
+{"level":"info","message":"[RESPONSE] [ID: 962f29d8] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '766ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+766ms","timestamp":"2024-06-20T10:12:45.367Z"}
+{"level":"info","message":"[REQUEST] [ID: abff9d14] [POST] /webhook","ms":"+2m","timestamp":"2024-06-20T10:14:39.515Z"}
+{"level":"info","message":"[RESPONSE] [ID: abff9d14] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '880ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+880ms","timestamp":"2024-06-20T10:14:40.395Z"}
+{"level":"info","message":"[REQUEST] [ID: 0a73d7f6] [POST] /webhook","ms":"+481ms","timestamp":"2024-06-20T10:14:40.876Z"}
+{"level":"info","message":"[RESPONSE] [ID: 0a73d7f6] [POST] /webhook [STATUS: 200] [RESPONSE TIME: '801ms']\n[RESPONSE MESSAGE: 'Webhook Run Successfully'}]","ms":"+801ms","timestamp":"2024-06-20T10:14:41.677Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T15:34:46.127Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+203ms","timestamp":"2024-06-20T15:34:46.331Z"}
+{"level":"info","message":"[REQUEST] [ID: 9e1f6f50] [POST] /webhook","ms":"+2m","timestamp":"2024-06-20T15:36:46.961Z"}
+{"level":"info","message":"[REQUEST] [ID: 04617ba9] [POST] /webhook","ms":"+147ms","timestamp":"2024-06-20T15:36:47.108Z"}
+{"level":"info","message":"[RESPONSE] [ID: 9e1f6f50] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '724ms']]","ms":"+577ms","timestamp":"2024-06-20T15:36:47.685Z"}
+{"level":"info","message":"[REQUEST] [ID: 4bf6c6bd] [POST] /webhook","ms":"+128ms","timestamp":"2024-06-20T15:36:47.813Z"}
+{"level":"info","message":"[RESPONSE] [ID: 04617ba9] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '890ms']]","ms":"+185ms","timestamp":"2024-06-20T15:36:47.998Z"}
+{"level":"info","message":"[REQUEST] [ID: 4ee48c50] [POST] /webhook","ms":"+384ms","timestamp":"2024-06-20T15:36:48.382Z"}
+{"level":"info","message":"[RESPONSE] [ID: 4bf6c6bd] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '835ms']]","ms":"+266ms","timestamp":"2024-06-20T15:36:48.648Z"}
+{"level":"info","message":"[RESPONSE] [ID: 4ee48c50] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '818ms']]","ms":"+552ms","timestamp":"2024-06-20T15:36:49.200Z"}
+{"level":"info","message":"[REQUEST] [ID: 6a3d2513] [POST] /webhook","ms":"+2m","timestamp":"2024-06-20T15:39:14.187Z"}
+{"level":"info","message":"[REQUEST] [ID: a8090451] [POST] /webhook","ms":"+10ms","timestamp":"2024-06-20T15:39:14.197Z"}
+{"level":"info","message":"[RESPONSE] [ID: a8090451] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '600ms']]","ms":"+600ms","timestamp":"2024-06-20T15:39:14.797Z"}
+{"level":"info","message":"[RESPONSE] [ID: 6a3d2513] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '917ms']]","ms":"+307ms","timestamp":"2024-06-20T15:39:15.104Z"}
+{"level":"info","message":"[REQUEST] [ID: 181e5161] [POST] /webhook","ms":"+304ms","timestamp":"2024-06-20T15:39:15.408Z"}
+{"level":"info","message":"[RESPONSE] [ID: 181e5161] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '821ms']]","ms":"+821ms","timestamp":"2024-06-20T15:39:16.229Z"}
+{"level":"info","message":"[REQUEST] [ID: 8cf8a9b4] [POST] /webhook","ms":"+194ms","timestamp":"2024-06-20T15:39:16.423Z"}
+{"level":"info","message":"[REQUEST] [ID: 26701ca6] [POST] /webhook","ms":"+58ms","timestamp":"2024-06-20T15:39:16.480Z"}
+{"level":"info","message":"[RESPONSE] [ID: 26701ca6] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '458ms']]","ms":"+458ms","timestamp":"2024-06-20T15:39:16.939Z"}
+{"level":"info","message":"[RESPONSE] [ID: 8cf8a9b4] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '823ms']]","ms":"+307ms","timestamp":"2024-06-20T15:39:17.246Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T15:39:37.751Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+164ms","timestamp":"2024-06-20T15:39:37.916Z"}
+{"level":"info","message":"[REQUEST] [ID: 4a907a43] [POST] /webhook","ms":"+1m","timestamp":"2024-06-20T15:40:41.187Z"}
+{"level":"info","message":"[REQUEST] [ID: f690dbb7] [POST] /webhook","ms":"+90ms","timestamp":"2024-06-20T15:40:41.278Z"}
+{"level":"info","message":"[REQUEST] [ID: 6a067e92] [POST] /webhook","ms":"+4ms","timestamp":"2024-06-20T15:40:41.282Z"}
+{"level":"info","message":"[RESPONSE] [ID: 4a907a43] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+1s","timestamp":"2024-06-20T15:40:42.305Z"}
+{"level":"info","message":"[RESPONSE] [ID: f690dbb7] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+136ms","timestamp":"2024-06-20T15:40:42.441Z"}
+{"level":"info","message":"[RESPONSE] [ID: 6a067e92] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+470ms","timestamp":"2024-06-20T15:40:42.911Z"}
+{"level":"info","message":"[REQUEST] [ID: 42d5756d] [POST] /webhook","ms":"+416ms","timestamp":"2024-06-20T15:40:43.327Z"}
+{"level":"info","message":"[RESPONSE] [ID: 42d5756d] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '917ms']]","ms":"+917ms","timestamp":"2024-06-20T15:40:44.244Z"}
+{"level":"info","message":"[REQUEST] [ID: 064b2070] [POST] /webhook","ms":"+9m","timestamp":"2024-06-20T15:49:48.866Z"}
+{"level":"info","message":"[RESPONSE] [ID: 064b2070] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+1s","timestamp":"2024-06-20T15:49:49.982Z"}
+{"level":"info","message":"[REQUEST] [ID: 8b342276] [POST] /webhook","ms":"+83ms","timestamp":"2024-06-20T15:49:50.065Z"}
+{"level":"info","message":"[REQUEST] [ID: bf980ef6] [POST] /webhook","ms":"+1s","timestamp":"2024-06-20T15:49:51.111Z"}
+{"level":"info","message":"[RESPONSE] [ID: 8b342276] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+226ms","timestamp":"2024-06-20T15:49:51.337Z"}
+{"level":"info","message":"[RESPONSE] [ID: bf980ef6] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+975ms","timestamp":"2024-06-20T15:49:52.312Z"}
+{"level":"info","message":"[REQUEST] [ID: 185f1983] [POST] /webhook","ms":"+41ms","timestamp":"2024-06-20T15:49:52.353Z"}
+{"level":"info","message":"[RESPONSE] [ID: 185f1983] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+1s","timestamp":"2024-06-20T15:49:53.668Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T15:50:11.397Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+354ms","timestamp":"2024-06-20T15:50:11.752Z"}
+{"level":"info","message":"[REQUEST] [ID: 016c224d] [POST] /webhook","ms":"+7m","timestamp":"2024-06-20T15:57:32.893Z"}
+{"level":"info","message":"[REQUEST] [ID: 0e5d590b] [POST] /webhook","ms":"+1s","timestamp":"2024-06-20T15:57:33.992Z"}
+{"level":"info","message":"[REQUEST] [ID: 6d225bed] [POST] /webhook","ms":"+4ms","timestamp":"2024-06-20T15:57:33.996Z"}
+{"level":"info","message":"[RESPONSE] [ID: 016c224d] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+585ms","timestamp":"2024-06-20T15:57:34.581Z"}
+{"level":"info","message":"[RESPONSE] [ID: 6d225bed] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+710ms","timestamp":"2024-06-20T15:57:35.291Z"}
+{"level":"info","message":"[REQUEST] [ID: e8ec4120] [POST] /webhook","ms":"+4ms","timestamp":"2024-06-20T15:57:35.295Z"}
+{"level":"info","message":"[RESPONSE] [ID: 0e5d590b] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+9ms","timestamp":"2024-06-20T15:57:35.304Z"}
+{"level":"info","message":"[RESPONSE] [ID: e8ec4120] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+1s","timestamp":"2024-06-20T15:57:36.704Z"}
+{"level":"info","message":"[REQUEST] [ID: 6c392c98] [POST] /webhook/","ms":"+23m","timestamp":"2024-06-20T16:20:15.344Z"}
+{"level":"info","message":"[RESPONSE] [ID: 6c392c98] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '39ms']]","ms":"+32ms","timestamp":"2024-06-20T16:20:15.379Z"}
+{"level":"info","message":"[REQUEST] [ID: a1b398f1] [POST] /webhook/","ms":"+6m","timestamp":"2024-06-20T16:25:50.373Z"}
+{"level":"info","message":"[RESPONSE] [ID: a1b398f1] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '2ms']]","ms":"+2ms","timestamp":"2024-06-20T16:25:50.375Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T16:27:04.917Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+252ms","timestamp":"2024-06-20T16:27:05.169Z"}
+{"level":"info","message":"[REQUEST] [ID: 6dbfb2ba] [POST] /webhook/","ms":"+32s","timestamp":"2024-06-20T16:27:37.493Z"}
+{"level":"info","message":"[RESPONSE] [ID: 6dbfb2ba] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+1s","timestamp":"2024-06-20T16:27:38.494Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T16:28:06.152Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+142ms","timestamp":"2024-06-20T16:28:06.295Z"}
+{"level":"info","message":"[REQUEST] [ID: 4e1b6aa0] [POST] /webhook/","ms":"+4s","timestamp":"2024-06-20T16:28:10.670Z"}
+{"level":"info","message":"[RESPONSE] [ID: 4e1b6aa0] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+2s","timestamp":"2024-06-20T16:28:12.394Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T16:30:25.984Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+249ms","timestamp":"2024-06-20T16:30:26.233Z"}
+{"level":"info","message":"[REQUEST] [ID: cce43dca] [POST] /webhook/","ms":"+9s","timestamp":"2024-06-20T16:30:34.873Z"}
+{"level":"info","message":"[RESPONSE] [ID: cce43dca] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '598ms']]","ms":"+598ms","timestamp":"2024-06-20T16:30:35.471Z"}
+{"level":"info","message":"[REQUEST] [ID: 9aafe7d3] [POST] /webhook/","ms":"+1m","timestamp":"2024-06-20T16:31:36.054Z"}
+{"level":"info","message":"[RESPONSE] [ID: 9aafe7d3] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '521ms']]","ms":"+520ms","timestamp":"2024-06-20T16:31:36.574Z"}
+{"level":"info","message":"[REQUEST] [ID: aa22bb58] [POST] /webhook/","ms":"+34m","timestamp":"2024-06-20T17:05:28.368Z"}
+{"level":"info","message":"[RESPONSE] [ID: aa22bb58] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '744ms']]","ms":"+737ms","timestamp":"2024-06-20T17:05:29.108Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T17:06:24.526Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+281ms","timestamp":"2024-06-20T17:06:24.807Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T17:08:37.100Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+297ms","timestamp":"2024-06-20T17:08:37.397Z"}
+{"level":"info","message":"[REQUEST] [ID: de8bbe6b] [POST] /webhook/","ms":"+7s","timestamp":"2024-06-20T17:08:44.491Z"}
+{"level":"info","message":"[RESPONSE] [ID: de8bbe6b] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '9s']]","ms":"+10s","timestamp":"2024-06-20T17:08:54.275Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T17:09:38.140Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+164ms","timestamp":"2024-06-20T17:09:38.306Z"}
+{"level":"info","message":"[REQUEST] [ID: bfe16e3a] [POST] /webhook/","ms":"+11s","timestamp":"2024-06-20T17:09:49.335Z"}
+{"level":"info","message":"[RESPONSE] [ID: bfe16e3a] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '921ms']]","ms":"+921ms","timestamp":"2024-06-20T17:09:50.256Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T17:10:33.111Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+155ms","timestamp":"2024-06-20T17:10:33.266Z"}
+{"level":"info","message":"[REQUEST] [ID: 7347b901] [POST] /webhook/","ms":"+4s","timestamp":"2024-06-20T17:10:36.767Z"}
+{"level":"info","message":"[RESPONSE] [ID: 7347b901] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '1s']]","ms":"+1s","timestamp":"2024-06-20T17:10:38.139Z"}
+{"level":"info","message":"[REQUEST] [ID: 8fdea2b0] [POST] /webhook/","ms":"+20s","timestamp":"2024-06-20T17:10:58.430Z"}
+{"level":"info","message":"[RESPONSE] [ID: 8fdea2b0] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '637ms']]","ms":"+637ms","timestamp":"2024-06-20T17:10:59.067Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T17:11:10.743Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+147ms","timestamp":"2024-06-20T17:11:10.891Z"}
+{"level":"info","message":"[REQUEST] [ID: 94641b18] [POST] /webhook/","ms":"+2s","timestamp":"2024-06-20T17:11:13.271Z"}
+{"level":"info","message":"[RESPONSE] [ID: 94641b18] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '627ms']]","ms":"+627ms","timestamp":"2024-06-20T17:11:13.898Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T17:13:48.862Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+173ms","timestamp":"2024-06-20T17:13:49.036Z"}
+{"level":"info","message":"[REQUEST] [ID: f4c14a64] [POST] /webhook/","ms":"+1m","timestamp":"2024-06-20T17:14:51.007Z"}
+{"level":"info","message":"[RESPONSE] [ID: f4c14a64] [POST] /webhook/ [STATUS: 204] [RESPONSE TIME: '2s']]","ms":"+2s","timestamp":"2024-06-20T17:14:53.162Z"}
+{"level":"info","message":"[REQUEST] [ID: 5531911b] [POST] /webhook","ms":"+9m","timestamp":"2024-06-20T17:24:14.278Z"}
+{"level":"info","message":"[RESPONSE] [ID: 5531911b] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '571ms']]","ms":"+571ms","timestamp":"2024-06-20T17:24:14.849Z"}
+{"level":"info","message":"[REQUEST] [ID: 665a810f] [POST] /webhook","ms":"+353ms","timestamp":"2024-06-20T17:24:15.202Z"}
+{"level":"info","message":"[RESPONSE] [ID: 665a810f] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '393ms']]","ms":"+393ms","timestamp":"2024-06-20T17:24:15.595Z"}
+{"level":"info","message":"✔ ENV VARIABLES LOADED","ms":"+0ms","timestamp":"2024-06-20T17:24:45.900Z"}
+{"level":"info","message":"✔ SERVER LOADED, API END POINT 'http://192.168.29.62:3000/api/', VIEWS END POINT 'http://192.168.29.62:3000/'","ms":"+250ms","timestamp":"2024-06-20T17:24:46.150Z"}
+{"level":"info","message":"[REQUEST] [ID: 3f6046da] [POST] /webhook","ms":"+19s","timestamp":"2024-06-20T17:25:04.925Z"}
+{"level":"info","message":"[REQUEST] [ID: 1b8d2f92] [POST] /webhook","ms":"+85ms","timestamp":"2024-06-20T17:25:05.010Z"}
+{"level":"info","message":"[RESPONSE] [ID: 1b8d2f92] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '542ms']]","ms":"+542ms","timestamp":"2024-06-20T17:25:05.552Z"}
+{"level":"info","message":"[RESPONSE] [ID: 3f6046da] [POST] /webhook [STATUS: 204] [RESPONSE TIME: '635ms']]","ms":"+8ms","timestamp":"2024-06-20T17:25:05.560Z"}
