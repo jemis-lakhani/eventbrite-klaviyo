@@ -1,10 +1,14 @@
-let axios = require('axios');
+let axios = require("axios");
+const { placeOrder } = require("./klaviyo.js");
 const klaviyoApiKey = process.env.KLAVIYO_PRIVATE_API_KEY;
 
-console.log(`DEBUG: :-------------: klaviyoApiKey :-------------:`, klaviyoApiKey)
+console.log(
+  `DEBUG: :-------------: klaviyoApiKey :-------------:`,
+  klaviyoApiKey
+);
 //*import the axios helper
-const { axiosInstance, axiosRequest } = require('../helpers/axios.helper');
-const response = require('../helpers/api.response.helper');
+const { axiosInstance, axiosRequest } = require("../helpers/axios.helper");
+const response = require("../helpers/api.response.helper");
 //* write a function here
 // module.exports = (req, res) => {
 //   console.log(`DEBUG: :-------------: req.body :-------------:`, req.body)
@@ -19,26 +23,37 @@ module.exports = {
       let webhookData = req.body;
       console.log(webhookData, "webhook");
 
-      if (webhookData?.api_url && webhookData.api_url.includes('https://www.eventbriteapi.com/v3')) {
-        let api_url = webhookData.api_url?.split("https://www.eventbriteapi.com/v3");
-        let eventData = await axiosRequest('GET', webhookData?.api_url);
+      if (
+        webhookData?.api_url &&
+        webhookData.api_url.includes("https://www.eventbriteapi.com/v3")
+      ) {
+        let api_url = webhookData.api_url?.split(
+          "https://www.eventbriteapi.com/v3"
+        );
+        let eventData = await axiosRequest("GET", webhookData?.api_url);
 
-        console.log(eventData, "------------- Data From Webhook Updated -------------");
-        if (eventData?.config?.action === 'event.created') {
+        console.log(
+          eventData,
+          "------------- Data From Webhook Updated -------------"
+        );
 
+        if (eventData?.config?.action === "order.placed") {
+          placeOrder(eventData); // call the function according to the event
+        }
 
+        if (eventData?.config?.action === "event.created") {
           const klaviyoEvent = {
-            method: 'POST',
-            url: 'https://a.klaviyo.com/api/events/',
+            method: "POST",
+            url: "https://a.klaviyo.com/api/events/",
             headers: {
-              accept: 'application/json',
-              revision: '2024-06-15',
-              'content-type': 'application/json',
-              Authorization: `Klaviyo-API-Key ${klaviyoApiKey}`
+              accept: "application/json",
+              revision: "2024-06-15",
+              "content-type": "application/json",
+              Authorization: `Klaviyo-API-Key ${klaviyoApiKey}`,
             },
             data: {
               data: {
-                type: 'event',
+                type: "event",
                 attributes: {
                   properties: {
                     name: eventData.name.text,
@@ -56,17 +71,22 @@ module.exports = {
                   time: new Date().toISOString(), // Current time in ISO format
                   value: eventData.capacity,
                   value_currency: eventData.currency,
-                  metric: { data: { type: 'metric', attributes: { name: 'Event Created' } } },
+                  metric: {
+                    data: {
+                      type: "metric",
+                      attributes: { name: "Event Created" },
+                    },
+                  },
                   profile: {
                     data: {
-                      type: 'profile',
+                      type: "profile",
                       attributes: {
                         organization_id: eventData.organization_id,
-                        email: 'organizer@example.com' // Placeholder, replace with actual data if available
-                      }
-                    }
-                  }
-                }
+                        email: "organizer@example.com", // Placeholder, replace with actual data if available
+                      },
+                    },
+                  },
+                },
                 // attributes: {
                 //   properties: {
                 //     name: 'TEST EVENT DATA',
@@ -95,32 +115,32 @@ module.exports = {
                 //     }
                 //   }
                 // }
-              }
-            }
+              },
+            },
           };
 
           // Send data to Klaviyo
           const klaviyoResponse = await axios.request(klaviyoEvent);
 
-          console.log(klaviyoResponse.data, "------------- Data Sent to Klaviyo -------------");
+          console.log(
+            klaviyoResponse.data,
+            "------------- Data Sent to Klaviyo -------------"
+          );
         }
-        return response.OK({ res, message: 'Webhook Run Successfully', payload: data });
-
+        return response.OK({
+          res,
+          message: "Webhook Run Successfully",
+          payload: data,
+        });
       } else {
         console.log("api_url not found");
         return response.NO_CONTENT_FOUND({ res });
       }
-
     } catch (error) {
       console.log(error, "error");
       return response.NO_CONTENT_FOUND({ res });
-
     }
-
   },
-
-
-
 };
 //* create event data from webhook
 // event.created
