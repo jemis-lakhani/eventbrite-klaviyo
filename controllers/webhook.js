@@ -27,110 +27,29 @@ module.exports = {
         webhookData?.api_url &&
         webhookData.api_url.includes("https://www.eventbriteapi.com/v3")
       ) {
-        let api_url = webhookData.api_url?.split(
-          "https://www.eventbriteapi.com/v3"
-        );
+        // let api_url = webhookData.api_url?.split(
+        //   "https://www.eventbriteapi.com/v3"
+        // );
+        // need to handle the event data error here
         let eventData = await axiosRequest("GET", webhookData?.api_url);
 
         console.log(
-          eventData,
+          eventData,eventData?.data?.status,
           "------------- Data From Webhook Updated -------------"
         );
 
-        if (eventData?.config?.action === "order.placed") {
-          placeOrder(eventData); // call the function according to the event
+        if (webhookData?.config?.action === "order.placed") {
+          console.log("order.placed--------------------------------------------------------------");
+          await placeOrder(eventData); // call the function according to the event
         }
 
-        if (eventData?.config?.action === "event.created") {
-          const klaviyoEvent = {
-            method: "POST",
-            url: "https://a.klaviyo.com/api/events/",
-            headers: {
-              accept: "application/json",
-              revision: "2024-06-15",
-              "content-type": "application/json",
-              Authorization: `Klaviyo-API-Key ${klaviyoApiKey}`,
-            },
-            data: {
-              data: {
-                type: "event",
-                attributes: {
-                  properties: {
-                    name: eventData.name.text,
-                    description: eventData.description.text,
-                    url: eventData.url,
-                    start: eventData.start.utc,
-                    end: eventData.end.utc,
-                    capacity: eventData.capacity,
-                    status: eventData.status,
-                    currency: eventData.currency,
-                    is_free: eventData.is_free,
-                    summary: eventData.summary,
-                    source: eventData.source,
-                  },
-                  time: new Date().toISOString(), // Current time in ISO format
-                  value: eventData.capacity,
-                  value_currency: eventData.currency,
-                  metric: {
-                    data: {
-                      type: "metric",
-                      attributes: { name: "Event Created" },
-                    },
-                  },
-                  profile: {
-                    data: {
-                      type: "profile",
-                      attributes: {
-                        organization_id: eventData.organization_id,
-                        email: "organizer@example.com", // Placeholder, replace with actual data if available
-                      },
-                    },
-                  },
-                },
-                // attributes: {
-                //   properties: {
-                //     name: 'TEST EVENT DATA',
-                //     description: 'lorem iosum domner',
-                //     url: 'https://www.eventbrite.com/e/test-event-data-tickets-929038799057',
-                //     start: '2024-07-30T04:30:00Z',
-                //     end: '2024-07-30T06:30:00Z',
-                //     capacity: 25,
-                //     status: 'draft',
-                //     currency: 'USD',
-                //     is_free: true,
-                //     summary: 'lorem iosum domner',
-                //     source: 'coyote',
-                //   },
-                //   time: new Date().toISOString(), // Current time in ISO format
-                //   value: 25,
-                //   value_currency: 'USD',
-                //   metric: { data: { type: 'metric', attributes: { name: 'Event Created' } } },
-                //   profile: {
-                //     data: {
-                //       type: 'profile',
-                //       attributes: {
-                //         organization_id: '86629369253',
-                //         email: 'organizer@example.com' // Placeholder, replace with actual data if available
-                //       }
-                //     }
-                //   }
-                // }
-              },
-            },
-          };
-
-          // Send data to Klaviyo
-          const klaviyoResponse = await axios.request(klaviyoEvent);
-
-          console.log(
-            klaviyoResponse.data,
-            "------------- Data Sent to Klaviyo -------------"
-          );
+        if (webhookData?.config?.action === "event.created") {
+        await createEvent(eventData); // call the function according to the event
         }
         return response.OK({
           res,
           message: "Webhook Run Successfully",
-          payload: data,
+          payload: eventData.data,
         });
       } else {
         console.log("api_url not found");

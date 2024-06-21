@@ -1,4 +1,4 @@
-export const KLAVIYO_METRIC = {
+exports.KLAVIYO_METRIC = {
   ORDER_PLACED: "Order Placed on Eventbrite",
   ORDER_UPDATED: "Order Updated on Eventbrite",
   ORDER_REFUNDED: "Order Refunded on Eventbrite",
