@@ -16,11 +16,12 @@ let config = {
 
 exports.placeOrder = async (eventBriteData) => {
   try {
+    const curDate = new Date().toISOString();
     let klaviyoEvent = JSON.stringify({
       data: {
         type: "event",
         "attributes": {
-          "time": eventBriteData?.created,
+          "time": curDate,
           "value": eventBriteData?.costs?.gross?.value,
           "value_currency": eventBriteData?.costs?.gross?.currency,
           "properties": {
@@ -58,7 +59,9 @@ exports.placeOrder = async (eventBriteData) => {
 };
 
 exports.createEvent = async (eventData) => {
-  let klaviyoEvent = JSON.stringify({
+  try {
+    const curDate = new Date().toISOString();
+    let klaviyoEvent = JSON.stringify({
     data: {
       type: "event",
       "attributes": {
@@ -75,7 +78,7 @@ exports.createEvent = async (eventData) => {
           summary: eventData.summary,
           source: eventData.source
         },
-        "time": eventData.created,
+        "time": curDate,
         value: eventData.capacity,
         value_currency: eventData.currency,
         metric: { data: { type: 'metric', attributes: { name: 'Event Created' } } },
@@ -96,15 +99,19 @@ exports.createEvent = async (eventData) => {
   config.data = klaviyoEvent;
   await axios.request(config)
   return "Event Created successfully";
+} catch (error) {
+  console.log(error.message, "error");
+}
 };
 
 exports.orderUpdated = async (eventBriteData) => {
   try {
+    const curDate = new Date().toISOString();
     let klaviyoEvent = JSON.stringify({
       data: {
         type: "event",
         "attributes": {
-          "time": eventBriteData?.created,
+          "time": curDate,
           "value": eventBriteData?.costs?.gross?.value,
           "value_currency": eventBriteData?.costs?.gross?.currency,
           "properties": {
@@ -142,11 +149,12 @@ exports.orderUpdated = async (eventBriteData) => {
 
 exports.orderRefunded = async (eventBriteData) => {
   try {
+    const curDate = new Date().toISOString();
     let klaviyoEvent = JSON.stringify({
       data: {
         type: "event",
         "attributes": {
-          "time": eventBriteData?.created,
+          "time": curDate,
           "value": eventBriteData?.costs?.gross?.value,
           "value_currency": eventBriteData?.costs?.gross?.currency,
           "properties": {
@@ -184,6 +192,7 @@ exports.orderRefunded = async (eventBriteData) => {
 
 exports.eventPublished = async (eventData) => {
   try {
+    const curDate = new Date().toISOString();
     let klaviyoEvent = JSON.stringify({
       data: {
         type: "event",
@@ -201,7 +210,7 @@ exports.eventPublished = async (eventData) => {
             summary: eventData.summary,
             source: eventData.source
           },
-          "time": eventData.created,
+          "time": curDate,
           value: eventData.capacity,
           value_currency: eventData.currency,
           metric: { data: { type: 'metric', attributes: { name: KLAVIYO_METRIC.EVENT_PUBLISHED } } },
@@ -229,11 +238,12 @@ exports.eventPublished = async (eventData) => {
 
 exports.attendeeUpdated = async (eventBriteData) => {
   try {
+    const curDate = new Date().toISOString();
     let klaviyoEvent = JSON.stringify({
       data: {
         type: "event",
         "attributes": {
-          "time": eventBriteData?.created,
+          "time": curDate,
           "value": eventBriteData?.costs?.gross?.value,
           "value_currency": eventBriteData?.costs?.gross?.currency,
           "properties": {
@@ -277,11 +287,12 @@ exports.attendeeUpdated = async (eventBriteData) => {
 
 exports.attendeeCheckedIn = async (eventBriteData) => {
   try {
+    const curDate = new Date().toISOString();
     let klaviyoEvent = JSON.stringify({
       data: {
         type: "event",
         "attributes": {
-          "time": eventBriteData?.created,
+          "time": curDate,
           "value": eventBriteData?.costs?.gross?.value,
           "value_currency": eventBriteData?.costs?.gross?.currency,
           "properties": {
@@ -323,11 +334,12 @@ exports.attendeeCheckedIn = async (eventBriteData) => {
 
 exports.attendeecheckedOut = async (eventBriteData) => {
   try {
+    const curDate = new Date().toISOString();
     let klaviyoEvent = JSON.stringify({
       data: {
         type: "event",
         "attributes": {
-          "time": eventBriteData?.created,
+          "time": curDate,
           "value": eventBriteData?.costs?.gross?.value,
           "value_currency": eventBriteData?.costs?.gross?.currency,
           "properties": {
