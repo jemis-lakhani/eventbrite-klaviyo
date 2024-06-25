@@ -1,7 +1,7 @@
 const Joi = require('joi');
 require('dotenv').config();
 
-const { logger } = require('../helpers');
+// const { logger } = require('../helpers');
 
 const envSchema = Joi.object({
     PROJECT_NAME: Joi.string().trim().default('T01'),
@@ -20,8 +20,12 @@ const { value: vars, error } = envSchema.validate(process.env, {
 });
 
 if (error) {
-    logger.error('✘ ENV VARIABLE(S) MISSING');
+    // logger.error('✘ ENV VARIABLE(S) MISSING');
+    console.log('✘ ENV VARIABLE(S) MISSING');
     throw new Error(error); //* this will stop the server if any env variable is missing
-} else logger.info(`✔ ENV VARIABLES LOADED`);
+} else {
+    // logger.info(`✔ ENV VARIABLES LOADED`);
+    console.log('✔ ENV VARIABLES LOADED');
+}
 
 module.exports = vars;

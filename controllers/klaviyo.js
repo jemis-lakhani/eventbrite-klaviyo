@@ -4,6 +4,7 @@ let axios = require("axios");
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
+  timeout: 10000,
   url: 'https://a.klaviyo.com/api/events/',
   headers: {
     'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
@@ -29,7 +30,7 @@ exports.placeOrder = async (eventBriteData) => {
             "ticket_type": eventBriteData?.ticket_type,
             "ticket_quantity": eventBriteData?.ticket_quantity,
             "check_in_status": eventBriteData?.status,
-            "order_id": eventBriteData?.id,
+            "order_id": eventBriteData?.id
           },
           metric: { data: { type: 'metric', attributes: { name: KLAVIYO_METRIC.ORDER_PLACED } } },
           "profile": {
@@ -72,13 +73,12 @@ exports.createEvent = async (eventData) => {
           currency: eventData.currency,
           is_free: eventData.is_free,
           summary: eventData.summary,
-          source: eventData.source,
+          source: eventData.source
         },
         "time": eventData.created,
         value: eventData.capacity,
         value_currency: eventData.currency,
         metric: { data: { type: 'metric', attributes: { name: 'Event Created' } } },
-
         "profile": {
           "data": {
             "type": "profile",
@@ -114,7 +114,7 @@ exports.orderUpdated = async (eventBriteData) => {
             "ticket_type": eventBriteData?.ticket_type,
             "ticket_quantity": eventBriteData?.ticket_quantity,
             "check_in_status": eventBriteData?.status,
-            "order_id": eventBriteData?.id,
+            "order_id": eventBriteData?.id
           },
           metric: { data: { type: 'metric', attributes: { name: KLAVIYO_METRIC.ORDER_UPDATED } } },
           "profile": {
@@ -156,7 +156,7 @@ exports.orderRefunded = async (eventBriteData) => {
             "ticket_type": eventBriteData?.ticket_type,
             "ticket_quantity": eventBriteData?.ticket_quantity,
             "check_in_status": eventBriteData?.status,
-            "order_id": eventBriteData?.id,
+            "order_id": eventBriteData?.id
           },
           metric: { data: { type: 'metric', attributes: { name: KLAVIYO_METRIC.ORDER_REFUNDED } } },
           "profile": {
@@ -199,7 +199,7 @@ exports.eventPublished = async (eventData) => {
             currency: eventData.currency,
             is_free: eventData.is_free,
             summary: eventData.summary,
-            source: eventData.source,
+            source: eventData.source
           },
           "time": eventData.created,
           value: eventData.capacity,
@@ -249,7 +249,7 @@ exports.attendeeUpdated = async (eventBriteData) => {
             "refunded": eventBriteData?.refunded,
             "affiliate": eventBriteData?.affiliate,
             "ticket_type": eventBriteData?.ticket_type,
-            "ticket_quantity": eventBriteData?.ticket_quantity,
+            "ticket_quantity": eventBriteData?.ticket_quantity
           },
           metric: { data: { type: 'metric', attributes: { name: KLAVIYO_METRIC.ATTENDEE_UPDATED } } },
           "profile": {
@@ -258,7 +258,7 @@ exports.attendeeUpdated = async (eventBriteData) => {
               "attributes": {
                 "first_name": eventBriteData?.profile?.first_name,
                 "last_name": eventBriteData?.profile?.last_name,
-                "email": eventBriteData?.profile?.email,
+                "email": eventBriteData?.profile?.email
               }
             }
           }
@@ -296,7 +296,7 @@ exports.attendeeCheckedIn = async (eventBriteData) => {
             "cancelled": eventBriteData?.cancelled,
             "refunded": eventBriteData?.refunded,
             "affiliate": eventBriteData?.affiliate,
-            "quantity": eventBriteData?.quantity,
+            "quantity": eventBriteData?.quantity
           },
           metric: { data: { type: 'metric', attributes: { name: KLAVIYO_METRIC.ATTENDEE_CHECKED_IN } } },
           "profile": {
@@ -305,7 +305,7 @@ exports.attendeeCheckedIn = async (eventBriteData) => {
               "attributes": {
                 "first_name": eventBriteData?.profile?.first_name,
                 "last_name": eventBriteData?.profile?.last_name,
-                "email": eventBriteData?.profile?.email,
+                "email": eventBriteData?.profile?.email
               }
             }
           }
@@ -342,7 +342,7 @@ exports.attendeecheckedOut = async (eventBriteData) => {
             "cancelled": eventBriteData?.cancelled,
             "refunded": eventBriteData?.refunded,
             "affiliate": eventBriteData?.affiliate,
-            "quantity": eventBriteData?.quantity,
+            "quantity": eventBriteData?.quantity
           },
           metric: { data: { type: 'metric', attributes: { name: KLAVIYO_METRIC.ATTENDEE_CHECKED_OUT } } },
           "profile": {
@@ -351,7 +351,7 @@ exports.attendeecheckedOut = async (eventBriteData) => {
               "attributes": {
                 "first_name": eventBriteData?.profile?.first_name,
                 "last_name": eventBriteData?.profile?.last_name,
-                "email": eventBriteData?.profile?.email,
+                "email": eventBriteData?.profile?.email
               }
             }
 
